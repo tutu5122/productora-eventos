@@ -7,6 +7,7 @@
     <tr>
       <th>Nombre</th>
       <th>Miembros</th>
+      <th>Integrantes</th>
       <th>Primer Show</th>
       <th>Tipo Banda</th>
       <th>Cantidad Conciertos</th>
@@ -20,6 +21,7 @@
       <tr>
         <td><%= band.name %></td>
         <td><%= band.members %></td>
+        <td><%= band.members_names %></td>
         <td><%= band.first_show %></td>
         <td><%= band.band_type.humanize %></td>
         <td><%= band.concerts.size %></td>

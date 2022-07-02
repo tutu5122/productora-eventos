@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.crew-group {
+   border: 1px solid #ccc;
+   padding: 5px;
+   margin: 10px 0;
+}

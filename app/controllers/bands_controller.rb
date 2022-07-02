@@ -14,6 +14,9 @@ class BandsController < ApplicationController
   # GET /bands/new
   def new
     @band = Band.new
+    5.times do
+      @band.crews.build
+    end
   end
 
   # GET /bands/1/edit
@@ -70,6 +73,6 @@ class BandsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def band_params
-      params.require(:band).permit(:name, :members, :first_show, :band_type)
+      params.require(:band).permit(:name, :members, :first_show, :band_type, crews_attributes: [:id, :name, :instrument, :_destroy])
     end
 end
